@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>ass1_6</title> 
+<script type="text/javascript">
+    var empName = prompt("Please enter employee name: ");
+    var hourRate = prompt("Hourly rate: ");
+    var numHourWorkPerWeek = prompt("Number of hours worked per week: ");
+    var overtimeRate = prompt("Overtime rate: ");
+    var payrollDeduction = prompt("Payroll deductions: ");
+    var taxRate = prompt("Tax rate in percent (ie: 5): ");
+    var maxRegularHrPerWeek = 40;
+
+    var numberOfOvertimeHrs = 0;
+    if (numHourWorkPerWeek > 40) {
+        numberOfOvertimeHrs = numHourWorkPerWeek - 40;
+    }
+
+    var grossPay = (hourRate * numHourWorkPerWeek) + (numberOfOvertimeHrs * overtimeRate);
+    var netPay = grossPay - payrollDeduction - ((taxRate * grossPay) / 100);
+    
+    document.write("Employee name: " + empName +  ": gross pay is: " + grossPay + " net pay is: " + netPay);
+
+</script>
+</head>
+<body> 
+</body> 
+</html>
