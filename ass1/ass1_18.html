@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>ass1_18</title> 
+<script type="text/javascript">
+    var counter = prompt("How many times (int): ");
+    
+    var average = 0;
+    var galon =0;
+    var mileage = 0;
+    while (counter > 0) {
+       mileage += parseFloat(prompt("mileage: "));  
+       galon +=  parseFloat(prompt("galons:  "));
+          
+       counter--;
+    }
+    average = mileage / galon;
+    alert("Average miles per galon: " + average);
+    
+</script>
+</head>
+<body> 
+</body> 
+</html>
